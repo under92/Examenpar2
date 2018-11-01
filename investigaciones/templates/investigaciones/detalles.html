@@ -1,0 +1,16 @@
+{% extends 'investigaciones/layout.html' %}
+
+{% block content %}
+<h3 class="center-align red lighten-5" style="border-radius: 50px; padding: 10px;">{{investigacion.titulo}}</h3>
+
+<div class="card">
+  <div class="card-content">
+    {{investigacion.sinopsis}}
+  </div>
+  <div class="card-action">
+    {{investigacion.created_at}}
+    <div style="float:right"><label>{{investigacion.autor}}</label></div>
+  </div>
+</div>
+
+{% endblock %}

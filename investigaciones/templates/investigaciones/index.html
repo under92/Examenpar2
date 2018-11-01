@@ -1,0 +1,24 @@
+{% extends 'investigaciones/layout.html' %}
+
+{% block content %}
+
+<ul class="collection with-header">
+  <li class="collection-header grey lighten-3"><h4>{{titulo}}</h4></li>
+  {% for investigacion in investigaciones %}
+    <li class="collection-item"><a class="collection-item" href="/papers/details/{{paper.id}}">{{investigacion.titulo}}  <label style="float:right;">{{investigacion.autor}} ({{investigacion.categoria}})</label> </a></li>
+
+  {% endfor %}
+</ul>
+<br>
+<div class="row ">
+  <div class="col s5 ">
+  	<button> <a style="display:block" class="center-align waves-effect waves-light btn col s6" href="/create">Subir Investigaciones</a></div> </button>
+</div>
+
+<div class="row">
+  <div class="col s1">
+    <button > <a style="display:block" class="center-align" href="/admin">Admin Login</a>  </button>
+  </div>
+</div>
+
+{% endblock %}
